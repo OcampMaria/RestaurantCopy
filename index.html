@@ -8,14 +8,12 @@
     <title>Lety's Mexican Restaurant</title>
     <!-- bulma cdn. CSS framework-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
-
     <!-- font-awesome css -->
     <link rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
       integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
       crossorigin="anonymous"
     />
-   
     <!--font-awesome cdn-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Scroll reveal CDN -->
@@ -24,6 +22,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"/>
     <!-- link to the page CSS file -->
     <link rel="stylesheet" href="./Develop/css/style.css">
+    <!--  Maps API -->
+    
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBqsJS840rhRLKvOIMbcUAokfwgAFMsB50&callback=initMap"
+        defer></script>
 </head>
 
 <body>
@@ -73,7 +76,7 @@
         </div>
         <div class="single-animation">
           <h5>Three Locations</h5>
-          <a href="#" class="btn cta-btn">Explore</a>
+          <a href="#map" class="btn cta-btn">Explore</a>
         </div>
       </div>
     </div>
@@ -157,10 +160,11 @@
     </div>
   </section>
   <!-- perfect  blend ends -->
+  
   <!-- Contact Info -->
-  <section class="culinary-delight">
-    <div class="container">
-      <div class="restaurant-info">
+  <section class="restaurant-info">
+    <div class="container cards">
+      
         <div class="restaurant-description padding-right animate-left">
           <div class="global-headline">
             <h2 class="subheadline">
@@ -169,20 +173,76 @@
             <h1 class="headline headline-dark">Info</h1>
             <div class="asterisk"><i class="fas fa-asterisk"></i></div>
           </div>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates eaque eveniet odio libero dolorem quo inventore recusandae provident perspiciatis nihil optio facilis sapiente in, ipsa iusto dignissimos perferendis tenetur atque.</p>
-          <a href="" class="btn body-btn">Contact</a>
+        
         </div>
-        <div class="image-group">
-          <img src="/images/delight-group-1.jpg" alt="">
-          <img src="/images/delight-group-2.jpg" alt="">
-        </div>
-      </div>
+       
+        <!-- Contact Info -->
+        <div id="contact-info" class="columns">
+          <div class="column">
+            <div class="card">
+              <div class="card-content">
+                <div class="media">
+                  <div class="media-content">
+                    <p class="title is-2">Lety's #1</p>
+                    <p class="subtitle is-4">
+                      4770 E. Clinton Ave. #101<br>
+                      Fresno, CA 93703<br>
+                      (559) 456-8690 <br>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="column">
+            <div class="card">
+              <div class="card-content">
+                <div class="media">
+                  <div class="media-content">
+                    <p class="title is-2">Lety's #2</p>
+                    <p class="subtitle is-4">
+                      1432 W. Ashlan Ave.<br>
+                      Fresno, CA 93705<br>
+                      (559) 226-7390<br>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="column">
+            <div class="card">
+              <div class="card-content">
+                <div class="media">
+                  <div class="media-content">
+                    <p class="title is-2">Lety's #3</p>
+                    <p class="subtitle is-4">
+                      2450 N. Brawley Ave. #104<br>
+                      Fresno, CA 93722<br>
+                      (559) 271-4558<br>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+       </div>
     </div>
   </section>
   <!-- contact Info Ends -->
+
+
+
+ <!-- Maps API -->
+ <div id="map_wrapper" class="map">
+  <div id="map_canvas" class="mapping"></div>
+</div>
+
   <!-- footer -->
   <footer>
-    <div class="container">
+    <div class=" ui container">
       <div class="back-to-top">
         <a href="#hero"><i class="fas fa-chevron-up"></i></a>
       </div>
@@ -210,7 +270,7 @@
             <form action="" class="newsletter-form">
               <input type="text" class="newsletter-input" placeholder="your email address...">
               <button class="newsletter-btn" type="submit">
-                <i class="fas fa-envelope"></i>
+                <i class="ui mail icon"></i>
               </button>
             </form>
           </div>
@@ -220,6 +280,9 @@
   </footer>
   <!-- footer ends -->
 
-<script src="/Develop/js/script.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+<script src="./Develop/js/script.js"></script>
+
 </body>
 </html>
