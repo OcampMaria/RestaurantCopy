@@ -1,10 +1,32 @@
+var buttonKaraoke = document.getElementById("btnKaraoke");
+var modalKaraoke = document.getElementById("modal1");
+var close = document.getElementsByClassName("modal-close")[0];
+
+
+// modal
+buttonKaraoke.onclick = function(){
+    modalKaraoke.style.display = "block"
+}
+close.onclick = function(){
+    modalKaraoke.style.display = "none";
+}
+close.onclick = function(){
+    modalKaraoke.style.display = "none";
+}
+window.onclick = function(event){
+    if(event.target.className == "modal-background") {
+        modalKaraoke.style.display = "none"
+    }
+}
+
+
 
 // select element sunction
 const selectEl= function (element) {
     return document.querySelector(element);
 };
 
-let menuToggler = selectEl(".menu-toggle");
+let menuToggler = selectEl(".nav-toggle");
 let body = selectEl("body");
 
 menuToggler.addEventListener("click", function () {
@@ -72,3 +94,12 @@ function initMap() {
     }
 }
 
+
+// Storage
+var saveButton = document.querySelector(".button");
+
+saveButton.addEventListener("click", function() {
+    var inputEmail = document.querySelector(".input");
+    localStorage.setItem(".input", inputEmail.value);   
+}
+)
